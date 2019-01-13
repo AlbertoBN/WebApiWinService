@@ -20,6 +20,7 @@ namespace WebApiWinService
             {
                 var pathToExe = Process.GetCurrentProcess().MainModule.FileName;
                 var pathToContentRoot = Path.GetDirectoryName(pathToExe);
+                Directory.SetCurrentDirectory(pathToContentRoot);
                 builder.UseContentRoot(pathToContentRoot);
             }
 
